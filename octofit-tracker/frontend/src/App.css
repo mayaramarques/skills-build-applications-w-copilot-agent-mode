@@ -1,0 +1,108 @@
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #222;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.octofit-logo {
+  height: 48px;
+  margin-right: 16px;
+  vertical-align: middle;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar {
+  background: linear-gradient(90deg, #0d47a1 0%, #1976d2 100%) !important;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar-brand, .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.navbar-nav .nav-link.active {
+  color: #ffd600 !important;
+  text-shadow: 0 1px 4px #0d47a1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0d47a1;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.card-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.table {
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.table thead {
+  background: #1976d2;
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #e3f2fd;
+}
+.table-bordered th, .table-bordered td {
+  border: 1px solid #90caf9 !important;
+}
+
+.btn, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-secondary {
+  border-radius: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.btn-primary {
+  background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
+  border: none;
+}
+.btn-success {
+  background: linear-gradient(90deg, #388e3c 0%, #66bb6a 100%);
+  border: none;
+}
+.btn-info {
+  background: linear-gradient(90deg, #0288d1 0%, #4fc3f7 100%);
+  border: none;
+}
+.btn-warning {
+  background: linear-gradient(90deg, #fbc02d 0%, #fff176 100%);
+  border: none;
+  color: #222;
+}
+.btn-secondary {
+  background: linear-gradient(90deg, #616161 0%, #bdbdbd 100%);
+  border: none;
+}
+
+a, .App-link {
+  color: #1976d2;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover, .App-link:hover {
+  color: #ffd600;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
