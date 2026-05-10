@@ -21,12 +21,6 @@ from rest_framework import routers
 
 from .views import UserViewSet, TeamViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet, api_root
 
-def get_base_url(request):
-    codespace_name = os.environ.get('CODESPACE_NAME')
-    if codespace_name:
-        return f"https://{codespace_name}-8000.app.github.dev"
-    else:
-        return request.build_absolute_uri('/')[:-1] if request else "http://localhost:8000"
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)

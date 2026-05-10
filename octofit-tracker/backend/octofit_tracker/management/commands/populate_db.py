@@ -1,7 +1,6 @@
 from django.core.management.base import BaseCommand
 from octofit_tracker.models import User, Team, Activity, Leaderboard, Workout
-from django.conf import settings
-from pymongo import MongoClient
+
 
 class Command(BaseCommand):
     help = 'Populate the octofit_db database with test data'
@@ -14,14 +13,11 @@ class Command(BaseCommand):
         Leaderboard.objects.all().delete()
         Workout.objects.all().delete()
 
-        # Conecta ao MongoDB para criar índice único em email
-        client = MongoClient('localhost', 27017)
-        db = client['octofit_db']
-        db.users.create_index('email', unique=True)
+
 
         # Times
-        marvel = Team.objects.create(name='marvel')
-        dc = Team.objects.create(name='dc')
+        Team.objects.create(name='marvel')
+        Team.objects.create(name='dc')
 
         # Usuários
         users = [
