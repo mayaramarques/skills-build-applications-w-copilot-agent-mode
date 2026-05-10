@@ -4,7 +4,8 @@ from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, Lea
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-def api_root(request):
+@api_view(['GET'])
+def api_root(request, format=None):
     return Response({
         'users': '/api/users/',
         'teams': '/api/teams/',
